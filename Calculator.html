@@ -1,0 +1,130 @@
+
+
+<html>
+    <head>
+        <title>Javascript Calculator</title>
+		
+		<style>
+			#content{
+				text-align: center;
+				width: 300px;
+				height: 300px;
+				border-radius: 10px;
+				border: 4px black;
+				border-style: solid;
+				background-color: #3d5c8f;
+				box-shadow: 5px 5px gray;
+			}
+			input{
+				margin:10px;
+				margin-top: 0px;
+				width: 90%;
+				height: 40px;
+				font-family: sans-serif;
+				text-align: center;
+				border-radius: 10px;
+				border: 4px black;
+				border-style: solid;
+				box-shadow: 4px 4px #272b7a;
+			}
+			button{
+				
+				height: 50px;
+				width: 60px;
+				background-image: linear-gradient(to top,#f7b985,#f49d54,#f7b985);
+				font-weight: bold;
+				font-size: 1.5em;
+				border-style: none;
+				border-radius: 60%;
+				box-shadow: 6px 6px #272b7a;
+			}
+			#res{
+				margin: 10px;
+				margin-bottom: 0px;
+				font-family: sans-serif;
+				font-weight: bold;
+				background-color: #fdff99;
+				height: 40px;
+				line-height: 100px;
+				border: 4px black;
+				border-radius: 10px;
+				border-style: solid;
+				box-shadow: 4px 4px #272b7a;
+				
+			}
+			span {
+				padding: 10px;
+				display: inline-block;
+				vertical-align: middle;
+				line-height: normal;
+			}
+			
+			#container {
+				padding: 100px 0;
+				 
+			}
+
+			
+			::placeholder{
+				text-align: center;
+				font-weight: bold;
+			}
+			
+		</style>
+		
+        
+    </head>
+    <body><center>
+		<div id="container">
+		<div class="vertical-center">
+
+		<div id="content">
+		<br>
+		<h1 style="font-family: sans-serif;  margin-top: 0px; color: white">Simple Calculator</h1>
+        <input type= "text" id = "inp1" placeholder="Enter 1st Number" >
+        <br>
+        <input type = "text" id = "inp2" placeholder="Enter 2nd Number">
+        <br>
+        <button onclick="calc('+')">+</button>&nbsp;&nbsp;
+        <button onclick="calc('-')">-</button>&nbsp;&nbsp;
+        <button onclick="calc('*')">*</button>&nbsp;&nbsp;
+        <button onclick="calc('/')">/</button>&nbsp;&nbsp;
+		<br>
+		<div id="res">
+			<span id="result">Output</span>	
+		</div>
+        
+        </div>
+			</div>
+		</div></center>
+    </body>
+	
+	<script type="text/javascript">
+            function calc(choice){
+                var n1 = document.getElementById("inp1").value;
+                var n2 = document.getElementById("inp2").value;
+                
+                n1 = parseInt(n1);
+                n2 = parseInt(n2);
+                var output;
+                switch(choice){
+                    case '+':
+                        output  = n1+n2;
+                        break;
+                    case '-':
+                        output  = n1-n2;
+                        break;
+                    case '*':
+                        output  = n1*n2;
+                        break;
+                    case '/':
+                        output  = n1/n2;
+                        break;
+                    default:
+                        break;
+                }
+                document.getElementById("result").innerHTML =  output;
+            }
+        </script>
+	
+</html>

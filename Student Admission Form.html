@@ -1,0 +1,133 @@
+<html>
+	<head>
+		
+		<title>Student Admission Form</title>
+		
+		<style>
+			
+			.box{
+				
+				background-clip: padding-box;
+			}
+			.content {
+			    margin: auto;
+			}
+			
+			button{
+				border-radius: 10px;
+				width: 140px;
+				height: 35px;
+				background-image: linear-gradient(to top,#2c8494,#58ddf5);
+				border-style: none;
+			}
+			
+			p{
+				font-size: 1.4em;
+				color: darkblue;
+				font-weight: bold;
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			input[type=text]{
+				margin: 6px;
+				margin-left: 0px;
+			}
+			
+			input[type=date]{
+				margin: 6px;
+				margin-left: 0px;
+				width: 180px;
+				text-align:right;	
+			}
+			
+			input[type=email]{
+				margin: 6px;
+				margin-left: 0px;				
+			}
+			
+			input[type=tel]{
+				margin: 5px;
+				margin-left: 0px;				
+			}
+			
+			#course{
+				margin: 5px;
+				width: 180px;
+				margin-left: 0px;
+			}
+			
+			.title{
+				line-height: 28pt;
+			}
+			
+			.container {		 
+			  position: relative;			 
+			}
+
+			.vertical-center {
+			  margin: 0;
+			  position: absolute;
+			  top: 50%;
+			  transform: translate(15%,300%);
+			}
+			
+			::placeholder{
+				text-align: center;
+			}
+			
+		</style>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
+	</head>
+	<body>
+		
+		<div class="container_fluid" style="padding:10px;">
+		
+			<div class="row">
+				
+				<div class="col-sm-4 box" style="height:100px; width:270px;">
+						<p>Student Admission Form</p><br>
+						<img id="image" src="girl.png" height="210px" width="210px">
+				</div>
+				
+				<div class="col-sm-4 box" style=" height:100px; width: 120px; margin: 0px; padding: 0px">
+					<div class="title">
+								First Name:<br>
+								Last Name:<br>
+								Date of Birth:<br>
+								Email:<br>
+								Mobile:<br>
+								Course:
+					</div>
+				</div>
+				
+				<div class="col-sm-4 box" style="height:100px; width:150px; padding: 0px">
+					<div class="container">
+						<form id="admissionform" method="post" action="connect.php" autocomplete="on">
+								<input type=text id="firstname" name="firstname"><br>
+								<input type=text id="lastname" name="lastname"><br>
+								<input type="date" id="date" name="date"><br>
+								<input type="email" id="email" name="email"><br>
+								<input type="tel" id="mob" name="mob"><br>
+								<select id="course" name="course">
+										<option value="Mathematics">Mathematics</option>
+										<option value="Chemistry">Chemistry</option>
+										<option value="Biology">Biology</option>
+								</select><br>
+							
+								<div class="vertical-center">
+								<button type="submit" value="submit"><font style="color:white; font-weight: bold; font-family: sans-serif">SUBMIT</font></button>
+								</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		
+	</body>
+</html>
